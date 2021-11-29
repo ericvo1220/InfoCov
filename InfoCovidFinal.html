@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoCovid</title>
+    <style>
+        /* placement of the header*/
+.header {
+  position: relative;
+  flex: 100%;
+  padding: 0px;
+}
+/* removes blue and underline of links in the header */
+.header a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 25px;
+}
+.space {
+  margin:0;
+  padding:0;
+  display: block;
+}
+/* centers the header link */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* body design */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 auto;
+  width: 1250px;
+  background-color: rgb(355, 355, 355);
+}
+
+
+
+
+/* sticky navbar - the navbar follows the user as they scroll through the page */
+.navbar{
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+/* changes the design of links on the navbar */
+.navbar a{
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  display:inline-block;
+}
+
+/* Change color on hover */
+.navbar a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+/* highlights the currently accessed link on the navbar */
+.navbar a.active{
+  background-color: #666;
+  color: white;
+}
+
+/* Sidebar/left column */
+.side{
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main{
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.cdc{
+    background-color: lightsalmon;
+    text-decoration:white;
+    border: 2px solid blue;
+    width: 350px;
+
+}
+h1 {
+  color: rgb(10, 13, 221);
+ 
+}
+
+
+.WHO{
+background-color: lightsalmon;
+text-decoration:white;
+border: 2px solid blue;
+width: 350px;
+
+}
+.button {
+  transition-duration: 0.4s;
+}
+/*shadow while hovering around the buttons*/
+.button:hover {
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+.button:hover{
+  background-color: red;
+}
+/* Style the links inside the sidenav */
+
+
+.button{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    
+        
+        </div>
+        <div class="navbar">
+            <a href="news.html" >News</a>
+            <a href="#">Resources</a>
+        
+            <a href="#" class="active">Info</a>
+            <a href="#">About Us</a>
+    
+        </div>
+        <div class="main">
+            <h1>General Information About Covid</h1>
+            <p>Covid 19 is caused by the pathogen SARS-Cov-2 that affects the respiratory system.
+             It was first found in Wuhan, China in late 2019 which brought pandemic all over the world afterward. 
+             Most of the cases do not require special treatment and recover with mild to moderate respiratory discomfort. 
+             For some cases especially for older people and underlying health conditions, the condition can worsen and requires treatment.
+            </p>
+            <p>
+                <img src= "Info Picture.jpg" width="500" height ="500">
+            </p>
+            <h1>Prevention</h1>
+            <p>The main way to prevent Covid-19 is to be aware of it. Some of the ways that will help to prevent this disease are as follow-
+            </p>
+            <ul>-Wear a mask in public
+            </ul>
+            <ul>-Maintain 6 ft distance with another person
+            </ul>
+            <ul>-Wash hands frequently with soap or use sanitizer
+            </ul>
+            <ul>-Get Vaccinated
+            </ul>
+            <h1> Helpful resources for Myths about covid and covid-vaccines around the globe</h1>
+
+
+        </div>
+        
+       
+        <div class="cdc">
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/facts.html" class= "button">Myths and Facts about Covid Vaccines by CDC</a>
+        </div>
+
+        <div class="WHO">
+            <a href="https://www.who.int/docs/default-source/searo/thailand/12myths-final099bfbf976c54d5fa3407a65b6d9fa9d.pdf" class= "button">Myths and Facts about Covid by WHO</a>
+        </div>
+
+
+
+<h1>Brief Case History About Covid</h1>
+<p> US Covid deaths in 2021 have surpassed the death toll in 2020. Everyone began the year with the hope that the vaccine would help control the cases and death tolls but that didn’t go as planned. There are 2000 deaths a day due to covid in the US which became the major cause of deaths to date.</p>
+
+
+
+<div class="KeyBackground">
+  <button onclick= "functionKeybackground()" class="button">Key Background</button>
+  <p id="backgroundbtn"></p>
+</div>
+<script>
+  function functionKeybackground(){
+    document.getElementById("backgroundbtn").innerHTML="There have been 250 million cases recorded worldwide of which 5.04 million have been death tolls(WHO). With the Delta variant, the cases and death rates have spiked more. There are improving signs that it is getting better after the vaccinations"
+  }
+</script>
+
+<div class="KeyFact">
+  <button onclick= "functionKeyFact()" class="button">Key Facts</button>
+  <p id="keybtn"></p>
+</div>
+<script>
+  function functionKeyFact(){
+    document.getElementById("keybtn").innerHTML="-As per Johns Hopkins University, more than 353,000 deaths have been reported which surpassed last year’s death tolls 352000(NY news). Only 56% of eligible Americans have been vaccinated as the rest of the people are still hesitating on the efficacy of the vaccine(NY news). United States has crossed 700,000 deaths more than any other country so far. " 
+
+  }
+</script>
+
+
+
+    <div class="Politics">
+    <button onclick="myFunction()"class="button">Politics</button>
+    <p id="btn1"></p>
+</div >
+    <script>
+      function myFunction() {
+        document.getElementById("btn1").innerHTML = "Most of the countries have utilized all their public and private resources to fight against Covid due to which their budget system is in chaos. Countries banned global travel and had special restrictions for people traveling from one place to another which impacted tourism aspects adversely. For many countries, tourism is the main source of income and due to the pandemic, their source of income has been compromised to date(NBR). ";
+      }
+    </script>
+  </body>
+
+
+  <body>
+    
+  <div class= "Economics">
+
+    <button onclick="myFunction1()"class="button">Economics</button>
+    <p id="btn2"></p>
+</div>
+    <script>
+      function myFunction1() {
+        document.getElementById("btn2").innerHTML = "Many small businesses are permanently closed after the shutdown. Many big corporations are at existential threats because of financial impact. Almost half of the global 3.3 billion people are at risk of losing their livelihood(WHO). ";
+      }
+    </script>
+  </body>
+
+
+  <body>
+    <div class="Health">
+       
+    <button onclick="myFunction2()"class="button">Health</button>
+    <p id="btn3"></p>
+    </div>
+    <script>
+      function myFunction2() {
+        document.getElementById("btn3").innerHTML = "People have been restricted to travel long distances and meet with their loved ones which left them alone. People did not only get sick physically in covid but the mental health issues raised to the peak. Millions of people were hospitalized and millions of people lost their life to covid.";
+  
+      }
+    </script>
+  </body>
+  
+  <body>
+    <div class="Poverty">
+        
+  
+    <button onclick="myFunction3()"class="button">Poverty</button>
+    <p id="btn4"></p>
+</div >
+    <script>
+      function myFunction3() {
+        document.getElementById("btn4").innerHTML = "Many people were left with no jobs as everything closed down due to pandemics. People were left with no food on the table due to which malnourishment increased in people. It is estimated that currently nearly 690 million people are left malnourished which could be increased by 132 million more by the end of the year(WHO). ";
+  
+      }
+    </script>
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
